@@ -123,17 +123,17 @@ const Index = () => {
               </Button>
             </div>
             <div className="grid grid-cols-3 gap-8 mt-12 pt-12 border-t border-white/20">
-              <div>
-                <div className="text-4xl font-bold text-primary mb-2">500+</div>
-                <div className="text-gray-300">Реализованных проектов</div>
+              <div className="animate-fade-in" style={{animationDelay: '0.2s', opacity: 0}}>
+                <div className="text-4xl font-bold text-primary mb-2">50+</div>
+                <div className="text-gray-300">Выполненных заказов</div>
               </div>
-              <div>
-                <div className="text-4xl font-bold text-primary mb-2">20 лет</div>
-                <div className="text-gray-300">Опыт на рынке</div>
+              <div className="animate-fade-in" style={{animationDelay: '0.4s', opacity: 0}}>
+                <div className="text-4xl font-bold text-primary mb-2">100%</div>
+                <div className="text-gray-300">Ручной контроль качества</div>
               </div>
-              <div>
-                <div className="text-4xl font-bold text-primary mb-2">15000 м²</div>
-                <div className="text-gray-300">Площадь производства</div>
+              <div className="animate-fade-in" style={{animationDelay: '0.6s', opacity: 0}}>
+                <div className="text-4xl font-bold text-primary mb-2">24/7</div>
+                <div className="text-gray-300">Готовы к вашему заказу</div>
               </div>
             </div>
           </div>
@@ -142,7 +142,7 @@ const Index = () => {
 
       <section id="products" className="py-24 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fade-in">
             <Badge className="mb-4">Наша продукция</Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Что мы производим</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -151,7 +151,7 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map((product, index) => (
-              <Card key={index} className="hover:shadow-xl transition-shadow border-2 hover:border-primary">
+              <Card key={index} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-primary hover:-translate-y-2 animate-fade-in" style={{animationDelay: `${index * 0.1}s`, opacity: 0}}>
                 <CardContent className="p-6">
                   <div className="bg-primary/10 w-16 h-16 rounded-lg flex items-center justify-center mb-4">
                     <Icon name={product.icon as any} size={32} className="text-primary" />
@@ -169,38 +169,38 @@ const Index = () => {
       <section id="production" className="py-24">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="animate-slide-in-left" style={{opacity: 0}}>
               <Badge className="mb-4">Производственная база</Badge>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Современное оборудование</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">Качество ручной работы</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Наш завод оснащен высокотехнологичным оборудованием для обработки металла и сварки.
-                Мы используем автоматизированные линии производства и современные технологии контроля качества.
+                Мы специализируемся на ручной высококачественной сварке металлоконструкций. Каждое изделие проходит 
+                тщательный контроль на всех этапах производства, что гарантирует индивидуальный подход и максимальное качество.
               </p>
               <div className="space-y-4">
                 <div className="flex gap-3">
                   <Icon name="CheckCircle" className="text-primary mt-1 flex-shrink-0" size={20} />
                   <div>
-                    <div className="font-semibold">Автоматизированная сварка</div>
-                    <div className="text-sm text-muted-foreground">Роботизированные комплексы для высокой точности</div>
+                    <div className="font-semibold">Ручная сварка высшего класса</div>
+                    <div className="text-sm text-muted-foreground">Опытные мастера с сертификатами НАКС</div>
                   </div>
                 </div>
                 <div className="flex gap-3">
                   <Icon name="CheckCircle" className="text-primary mt-1 flex-shrink-0" size={20} />
                   <div>
-                    <div className="font-semibold">Контроль качества</div>
-                    <div className="text-sm text-muted-foreground">Ультразвуковая дефектоскопия и рентгенконтроль</div>
+                    <div className="font-semibold">Индивидуальный подход</div>
+                    <div className="text-sm text-muted-foreground">Гибкость производства под нестандартные задачи</div>
                   </div>
                 </div>
                 <div className="flex gap-3">
                   <Icon name="CheckCircle" className="text-primary mt-1 flex-shrink-0" size={20} />
                   <div>
-                    <div className="font-semibold">Цех порошковой окраски</div>
-                    <div className="text-sm text-muted-foreground">Долговечное антикоррозийное покрытие</div>
+                    <div className="font-semibold">Контроль на каждом этапе</div>
+                    <div className="text-sm text-muted-foreground">Проверка качества швов и геометрии изделий</div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4 animate-slide-in-right" style={{opacity: 0}}>
               <img
                 src="https://cdn.poehali.dev/projects/8271d54d-0227-4d97-b2fe-d1436ae54530/files/6ad8b3a4-ffe7-4eac-bf21-ef43394db95e.jpg"
                 alt="Производство"
@@ -218,16 +218,16 @@ const Index = () => {
 
       <section id="about" className="py-24 bg-secondary text-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center animate-fade-in" style={{opacity: 0}}>
             <Badge className="mb-4 bg-white/20 text-white border-white/30">О компании</Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">АЗМИР — надежный партнер в металлообработке</h2>
             <p className="text-lg text-white/90 mb-8">
-              Алтайский завод металлоизделий и резервуаров работает с 2005 года. За это время мы реализовали более 500 проектов
-              для крупнейших предприятий нефтегазовой, химической и пищевой промышленности.
+              Мы — небольшая команда профессионалов, которая специализируется на изготовлении качественных 
+              металлоконструкций и резервуаров. Каждый заказ получает максимум внимания.
             </p>
             <p className="text-lg text-white/90">
-              Наша команда — это высококвалифицированные инженеры, конструкторы и сварщики с многолетним опытом.
-              Мы гарантируем качество продукции и соблюдение сроков изготовления.
+              Наша команда — это опытные сварщики с сертификатами НАКС, которые гарантируют 
+              надежность каждого шва и соблюдение всех технологических норм.
             </p>
           </div>
         </div>
@@ -235,14 +235,14 @@ const Index = () => {
 
       <section id="projects" className="py-24">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fade-in" style={{opacity: 0}}>
             <Badge className="mb-4">Портфолио</Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Реализованные проекты</h2>
             <p className="text-xl text-muted-foreground">Наши клиенты доверяют нам крупные проекты</p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in" style={{animationDelay: `${index * 0.15}s`, opacity: 0}}>
                 <CardContent className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div>
@@ -264,13 +264,13 @@ const Index = () => {
 
       <section id="certificates" className="py-24 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fade-in" style={{opacity: 0}}>
             <Badge className="mb-4">Сертификация</Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Качество подтверждено</h2>
           </div>
           <div className="max-w-3xl mx-auto space-y-4">
             {certificates.map((cert, index) => (
-              <Card key={index}>
+              <Card key={index} className="animate-slide-in-left" style={{animationDelay: `${index * 0.1}s`, opacity: 0}}>
                 <CardContent className="p-6 flex items-center gap-4">
                   <Icon name="Award" size={24} className="text-primary flex-shrink-0" />
                   <span className="text-lg">{cert}</span>
@@ -284,7 +284,7 @@ const Index = () => {
       <section id="contacts" className="py-24">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12">
-            <div>
+            <div className="animate-slide-in-left" style={{opacity: 0}}>
               <Badge className="mb-4">Свяжитесь с нами</Badge>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">Получить коммерческое предложение</h2>
               <p className="text-lg text-muted-foreground mb-8">
@@ -314,7 +314,7 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <Card>
+            <Card className="animate-slide-in-right" style={{opacity: 0}}>
               <CardContent className="p-6">
                 <form className="space-y-4">
                   <div>
