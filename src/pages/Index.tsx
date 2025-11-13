@@ -62,7 +62,11 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <Icon name="Factory" size={32} className="text-primary" />
+              <img 
+                src="https://cdn.poehali.dev/files/cc19966e-ea49-4313-a7a5-26515815899c.jpg" 
+                alt="АЗМИР" 
+                className="h-12 w-12 rounded-full object-cover"
+              />
               <div>
                 <h1 className="text-2xl font-bold text-foreground">АЗМИР</h1>
                 <p className="text-xs text-muted-foreground">Алтайский завод металлоизделий и резервуаров</p>
@@ -347,7 +351,11 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Icon name="Factory" size={24} />
+                <img 
+                  src="https://cdn.poehali.dev/files/cc19966e-ea49-4313-a7a5-26515815899c.jpg" 
+                  alt="АЗМИР" 
+                  className="h-8 w-8 rounded-full object-cover"
+                />
                 <span className="text-xl font-bold">АЗМИР</span>
               </div>
               <p className="text-white/70 text-sm">
