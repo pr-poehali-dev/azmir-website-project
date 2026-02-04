@@ -118,18 +118,18 @@ const Index = () => {
               <Button size="lg" className="text-lg px-8" onClick={() => scrollToSection('contacts')}>
                 Заказать расчет
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 bg-white/10 border-white text-white hover:bg-white/20">
+              <Button size="lg" variant="outline" className="text-lg px-8 bg-white/10 border-white text-white hover:bg-white/20" onClick={() => scrollToSection('production')}>
                 Наши проекты
               </Button>
             </div>
             <div className="grid grid-cols-3 gap-8 mt-12 pt-12 border-t border-white/20">
               <div className="animate-fade-in" style={{animationDelay: '0.2s', opacity: 0}}>
-                <div className="text-4xl font-bold text-primary mb-2">50+</div>
+                <div className="text-4xl font-bold text-primary mb-2">1000+</div>
                 <div className="text-gray-300">Выполненных заказов</div>
               </div>
               <div className="animate-fade-in" style={{animationDelay: '0.4s', opacity: 0}}>
                 <div className="text-4xl font-bold text-primary mb-2">100%</div>
-                <div className="text-gray-300">Ручной контроль качества</div>
+                <div className="text-gray-300">Контроль качества</div>
               </div>
               <div className="animate-fade-in" style={{animationDelay: '0.6s', opacity: 0}}>
                 <div className="text-4xl font-bold text-primary mb-2">24/7</div>
