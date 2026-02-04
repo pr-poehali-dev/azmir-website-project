@@ -214,7 +214,7 @@ const Index = () => {
             </div>
             <div className="grid grid-cols-2 gap-4 animate-slide-in-right" style={{opacity: 0}}>
               <img
-                src="https://cdn.poehali.dev/projects/8271d54d-0227-4d97-b2fe-d1436ae54530/files/32203612-03d8-4876-9812-48fc1ff40ee6.jpg"
+                src="https://cdn.poehali.dev/projects/8271d54d-0227-4d97-b2fe-d1436ae54530/files/88cea3f6-625c-4010-a9bd-dd6a67c8a645.jpg"
                 alt="Сварка металлоконструкций"
                 className="rounded-lg w-full h-64 object-cover"
               />
@@ -224,7 +224,7 @@ const Index = () => {
                 className="rounded-lg w-full h-64 object-cover mt-8"
               />
               <img
-                src="https://cdn.poehali.dev/projects/8271d54d-0227-4d97-b2fe-d1436ae54530/files/7c09d7c1-d1b6-4438-82f7-8d375b4ce2d3.jpg"
+                src="https://cdn.poehali.dev/projects/8271d54d-0227-4d97-b2fe-d1436ae54530/files/bec2afff-8e43-4432-b37e-f14d6fa64eea.jpg"
                 alt="Контроль качества"
                 className="rounded-lg w-full h-64 object-cover"
               />
