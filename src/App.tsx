@@ -11,6 +11,8 @@ import Recommendations from "./pages/Recommendations";
 import Requisites from "./pages/Requisites";
 import Delivery from "./pages/Delivery";
 import Offer from "./pages/Offer";
+import Cookies from "./pages/Cookies";
+import CookieBanner from "./components/CookieBanner";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +23,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <CookieBanner />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/privacy" element={<Privacy />} />
@@ -29,6 +32,7 @@ const App = () => (
           <Route path="/requisites" element={<Requisites />} />
           <Route path="/delivery" element={<Delivery />} />
           <Route path="/offer" element={<Offer />} />
+          <Route path="/cookies" element={<Cookies />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

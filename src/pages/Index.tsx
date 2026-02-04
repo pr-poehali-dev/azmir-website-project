@@ -436,6 +436,7 @@ const Index = () => {
                 <li><Link to="/privacy" className="text-white/70 hover:text-white transition-colors">Политика конфиденциальности</Link></li>
                 <li><Link to="/consent" className="text-white/70 hover:text-white transition-colors">Согласие на обработку данных</Link></li>
                 <li><Link to="/recommendations" className="text-white/70 hover:text-white transition-colors">Рекомендательные технологии</Link></li>
+                <li><Link to="/cookies" className="text-white/70 hover:text-white transition-colors">Политика использования cookie</Link></li>
                 <li><Link to="/offer" className="text-white/70 hover:text-white transition-colors">Публичная оферта</Link></li>
               </ul>
             </div>
