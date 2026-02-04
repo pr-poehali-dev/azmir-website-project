@@ -4,6 +4,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
@@ -323,7 +325,7 @@ const Index = () => {
                 <div className="flex items-start gap-3">
                   <Icon name="Mail" className="text-primary mt-1" size={20} />
                   <div>
-                    <div className="font-semibold">info@azmir-altai.ru</div>
+                    <div className="font-semibold">azmir2024@bk.ru</div>
                     <div className="text-sm text-muted-foreground">Ответим в течение часа</div>
                   </div>
                 </div>
@@ -362,12 +364,40 @@ const Index = () => {
                     <label className="block text-sm font-medium mb-2">Что вас интересует?</label>
                     <Textarea placeholder="Опишите ваш проект..." rows={4} />
                   </div>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-2">
+                      <Checkbox id="consent" className="mt-1" />
+                      <label htmlFor="consent" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
+                        Я согласен на <Link to="/consent" className="text-primary hover:underline">обработку персональных данных</Link>
+                      </label>
+                    </div>
+                    
+                    <div className="flex items-start gap-2">
+                      <Checkbox id="privacy" className="mt-1" />
+                      <label htmlFor="privacy" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
+                        Я ознакомлен с <Link to="/privacy" className="text-primary hover:underline">политикой конфиденциальности</Link>
+                      </label>
+                    </div>
+                    
+                    <div className="flex items-start gap-2">
+                      <Checkbox id="recommendations" className="mt-1" />
+                      <label htmlFor="recommendations" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
+                        Я ознакомлен с <Link to="/recommendations" className="text-primary hover:underline">использованием рекомендательных технологий</Link>
+                      </label>
+                    </div>
+                    
+                    <div className="flex items-start gap-2">
+                      <Checkbox id="offer" className="mt-1" />
+                      <label htmlFor="offer" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
+                        Я согласен с условиями <Link to="/offer" className="text-primary hover:underline">публичной оферты</Link>
+                      </label>
+                    </div>
+                  </div>
+                  
                   <Button className="w-full" size="lg">
                     Отправить заявку
                   </Button>
-                  <p className="text-xs text-muted-foreground text-center">
-                    Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
-                  </p>
                 </form>
               </CardContent>
             </Card>
@@ -401,25 +431,31 @@ const Index = () => {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Компания</h4>
-              <ul className="space-y-2 text-sm text-white/70">
-                <li>О заводе</li>
-                <li>Производство</li>
-                <li>Проекты</li>
-                <li>Сертификаты</li>
+              <h4 className="font-semibold mb-4">Документы</h4>
+              <ul className="space-y-2 text-sm">
+                <li><Link to="/privacy" className="text-white/70 hover:text-white transition-colors">Политика конфиденциальности</Link></li>
+                <li><Link to="/consent" className="text-white/70 hover:text-white transition-colors">Согласие на обработку данных</Link></li>
+                <li><Link to="/recommendations" className="text-white/70 hover:text-white transition-colors">Рекомендательные технологии</Link></li>
+                <li><Link to="/offer" className="text-white/70 hover:text-white transition-colors">Публичная оферта</Link></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Контакты</h4>
-              <ul className="space-y-2 text-sm text-white/70">
-                <li>+7 (3852) 123-45-67</li>
-                <li>info@azmir-altai.ru</li>
-                <li>г. Барнаул</li>
+              <h4 className="font-semibold mb-4">Информация</h4>
+              <ul className="space-y-2 text-sm">
+                <li><Link to="/requisites" className="text-white/70 hover:text-white transition-colors">Реквизиты компании</Link></li>
+                <li><Link to="/delivery" className="text-white/70 hover:text-white transition-colors">Условия доставки</Link></li>
+                <li className="text-white/70">Телефон: +7 (961) 980-89-85</li>
+                <li className="text-white/70">Email: azmir2024@bk.ru</li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-white/20 pt-8 text-center text-sm text-white/60">
-            © 2024 АЗМИР. Все права защищены. Алтайский завод металлоизделий и резервуаров.
+          <div className="border-t border-white/20 pt-8">
+            <div className="text-center text-sm text-white/60 mb-4">
+              © 2024 ООО «АПК-ИНЖИНИРИНГ». Все права защищены.
+            </div>
+            <div className="text-center text-xs text-white/50">
+              ИНН: 2223639429 | ОГРН: 1222200003080 | г. Барнаул, 9-й Заводской 62
+            </div>
           </div>
         </div>
       </footer>
