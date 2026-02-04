@@ -214,22 +214,22 @@ const Index = () => {
             </div>
             <div className="grid grid-cols-2 gap-4 animate-slide-in-right" style={{opacity: 0}}>
               <img
-                src="https://cdn.poehali.dev/projects/8271d54d-0227-4d97-b2fe-d1436ae54530/files/a7a2e806-e064-4f50-a04b-30ff0624ce22.jpg"
+                src="https://cdn.poehali.dev/projects/8271d54d-0227-4d97-b2fe-d1436ae54530/files/32203612-03d8-4876-9812-48fc1ff40ee6.jpg"
                 alt="Сварка металлоконструкций"
                 className="rounded-lg w-full h-64 object-cover"
               />
               <img
-                src="https://cdn.poehali.dev/projects/8271d54d-0227-4d97-b2fe-d1436ae54530/files/fde06339-ac9b-4f1e-acd0-6842f864d2de.jpg"
+                src="https://cdn.poehali.dev/projects/8271d54d-0227-4d97-b2fe-d1436ae54530/files/8f65624d-f1b3-4995-8748-188c7601c134.jpg"
                 alt="Резка металла"
                 className="rounded-lg w-full h-64 object-cover mt-8"
               />
               <img
-                src="https://cdn.poehali.dev/projects/8271d54d-0227-4d97-b2fe-d1436ae54530/files/ee856bfc-40ba-4f9c-a46b-b060c6849315.jpg"
+                src="https://cdn.poehali.dev/projects/8271d54d-0227-4d97-b2fe-d1436ae54530/files/7c09d7c1-d1b6-4438-82f7-8d375b4ce2d3.jpg"
                 alt="Контроль качества"
                 className="rounded-lg w-full h-64 object-cover"
               />
               <img
-                src="https://cdn.poehali.dev/projects/8271d54d-0227-4d97-b2fe-d1436ae54530/files/35d6c3b5-0c0b-489a-aeb3-219f0d49ab7d.jpg"
+                src="https://cdn.poehali.dev/projects/8271d54d-0227-4d97-b2fe-d1436ae54530/files/52853e38-0ffc-40b1-acca-2362357dc0b1.jpg"
                 alt="Сборка резервуаров"
                 className="rounded-lg w-full h-64 object-cover mt-8"
               />
