@@ -310,13 +310,13 @@ const Index = () => {
               <Badge className="mb-4">Свяжитесь с нами</Badge>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">Получить коммерческое предложение</h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Оставьте заявку и наш менеджер свяжется с вами в течение 30 минут для расчета стоимости
+                Оставьте заявку и наш менеджер свяжется с вами для расчета стоимости
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <Icon name="Phone" className="text-primary mt-1" size={20} />
                   <div>
-                    <div className="font-semibold">+7 (3852) 123-45-67</div>
+                    <div className="font-semibold">+7 (961) 980-89-85</div>
                     <div className="text-sm text-muted-foreground">Пн-Пт: 8:00 - 17:00</div>
                   </div>
                 </div>
@@ -330,7 +330,7 @@ const Index = () => {
                 <div className="flex items-start gap-3">
                   <Icon name="MapPin" className="text-primary mt-1" size={20} />
                   <div>
-                    <div className="font-semibold">г. Барнаул, Индустриальная 25</div>
+                    <div className="font-semibold">г. Барнаул, 9-й Заводской 62</div>
                     <div className="text-sm text-muted-foreground">Алтайский край, Россия</div>
                   </div>
                 </div>
