@@ -224,8 +224,8 @@ const Index = () => {
                 className="rounded-lg w-full h-64 object-cover mt-8"
               />
               <img
-                src="https://cdn.poehali.dev/projects/8271d54d-0227-4d97-b2fe-d1436ae54530/files/bec2afff-8e43-4432-b37e-f14d6fa64eea.jpg"
-                alt="Контроль качества"
+                src="https://cdn.poehali.dev/projects/8271d54d-0227-4d97-b2fe-d1436ae54530/files/b34e8f95-6255-4a17-aa8f-7a12fa1272a4.jpg"
+                alt="Сварочный процесс"
                 className="rounded-lg w-full h-64 object-cover"
               />
               <img
