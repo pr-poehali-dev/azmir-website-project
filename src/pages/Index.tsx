@@ -183,17 +183,17 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-in-left" style={{opacity: 0}}>
               <Badge className="mb-4">Производственная база</Badge>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Современное производство</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">Качество ручной работы</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Автоматизированное производство с использованием современного оборудования. Каждое изделие проходит 
+                Мы специализируемся на ручной высококачественной сварке металлоконструкций. Каждое изделие проходит 
                 тщательный контроль на всех этапах производства, что гарантирует индивидуальный подход и максимальное качество.
               </p>
               <div className="space-y-4">
                 <div className="flex gap-3">
                   <Icon name="CheckCircle" className="text-primary mt-1 flex-shrink-0" size={20} />
                   <div>
-                    <div className="font-semibold">Сварка высшего класса</div>
-                    <div className="text-sm text-muted-foreground">Сертифицированные мастера</div>
+                    <div className="font-semibold">Ручная сварка высшего класса</div>
+                    <div className="text-sm text-muted-foreground">Опытные мастера с сертификатами НАКС</div>
                   </div>
                 </div>
                 <div className="flex gap-3">
