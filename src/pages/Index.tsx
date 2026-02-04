@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from '@/components/sections/Header';
 import HeroSection from '@/components/sections/HeroSection';
 import MainSections from '@/components/sections/MainSections';
@@ -66,6 +66,14 @@ const Index = () => {
     const element = document.getElementById(section);
     element?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  useEffect(() => {
+    document.title = 'Производство металлоконструкций | Резервуары и емкости под ключ | Азмир';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Производство металлоконструкций с 2005 года: резервуары, технологические емкости, стальные конструкции. Проектирование, изготовление, монтаж. Контроль качества 100%. Заказать расчет.');
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">

@@ -20,7 +20,7 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
         <div className="max-w-2xl">
           <Badge className="mb-4 bg-primary/20 text-primary border-primary">С 2005 года на рынке</Badge>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight">
-            Производство металлоконструкций полного цикла
+            Производство металлоконструкций под ключ
           </h1>
           <p className="text-base md:text-xl text-gray-200 mb-6 md:mb-8">
             Проектирование, изготовление и монтаж резервуаров, технологических емкостей и металлоконструкций
