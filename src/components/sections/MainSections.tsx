@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 import { useState } from 'react';
+import { useToast } from '@/hooks/use-toast';
 
 interface Product {
   title: string;
@@ -28,11 +29,62 @@ interface MainSectionsProps {
 }
 
 export default function MainSections({ products, projects, certificates }: MainSectionsProps) {
+  const { toast } = useToast();
   const [consentPrivacy, setConsentPrivacy] = useState(false);
   const [consentData, setConsentData] = useState(false);
   const [consentRecommendations, setConsentRecommendations] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    message: ''
+  });
 
-  const isFormValid = consentPrivacy && consentData && consentRecommendations;
+  const isFormValid = consentPrivacy && consentData && consentRecommendations && formData.name && formData.phone && formData.email && formData.message;
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!isFormValid || isSubmitting) return;
+    
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch('https://functions.poehali.dev/ae31ec2d-d314-4604-8e50-66f563e1cf83', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+      
+      const result = await response.json();
+      
+      if (response.ok && result.success) {
+        toast({
+          title: 'Заявка отправлена!',
+          description: 'Мы свяжемся с вами в ближайшее время'
+        });
+        
+        setFormData({ name: '', phone: '', email: '', message: '' });
+        setConsentPrivacy(false);
+        setConsentData(false);
+        setConsentRecommendations(false);
+      } else {
+        throw new Error(result.error || 'Failed to send');
+      }
+    } catch (error) {
+      toast({
+        title: 'Ошибка',
+        description: 'Не удалось отправить заявку. Попробуйте позже или позвоните нам.',
+        variant: 'destructive'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <>
@@ -229,22 +281,44 @@ export default function MainSections({ products, projects, certificates }: MainS
             </div>
             <Card className="animate-slide-in-right" style={{opacity: 0}}>
               <CardContent className="p-6">
-                <form className="space-y-4">
+                <form className="space-y-4" onSubmit={handleSubmit}>
                   <div>
                     <label className="block text-sm font-medium mb-2">Ваше имя</label>
-                    <Input placeholder="Иван Иванов" />
+                    <Input 
+                      placeholder="Иван Иванов" 
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      required
+                    />
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-2">Телефон</label>
-                    <Input placeholder="+7 (___) ___-__-__" />
+                    <Input 
+                      placeholder="+7 (___) ___-__-__" 
+                      value={formData.phone}
+                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                      required
+                    />
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-2">Email</label>
-                    <Input type="email" placeholder="ivan@company.ru" />
+                    <Input 
+                      type="email" 
+                      placeholder="ivan@company.ru" 
+                      value={formData.email}
+                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      required
+                    />
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-2">Что вас интересует?</label>
-                    <Textarea placeholder="Опишите ваш проект..." rows={4} />
+                    <Textarea 
+                      placeholder="Опишите ваш проект..." 
+                      rows={4}
+                      value={formData.message}
+                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                      required
+                    />
                   </div>
                   
                   <div className="space-y-3">
@@ -292,8 +366,8 @@ export default function MainSections({ products, projects, certificates }: MainS
                     </div>
                   </div>
                   
-                  <Button className="w-full" size="lg" disabled={!isFormValid}>
-                    Отправить заявку
+                  <Button className="w-full" size="lg" type="submit" disabled={!isFormValid || isSubmitting}>
+                    {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
                   </Button>
                 </form>
               </CardContent>

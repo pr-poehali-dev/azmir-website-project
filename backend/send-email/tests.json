@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "name": "Test OPTIONS request for CORS",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": "",
+      "bodyMatcher": "exact"
+    },
+    {
+      "name": "Test POST with valid data",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Иван Петров",
+        "email": "test@example.com",
+        "phone": "+79001234567",
+        "message": "Прошу рассчитать стоимость резервуара объемом 50 м³"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Test POST with invalid email",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Иван",
+        "email": "invalid-email",
+        "phone": "+79001234567",
+        "message": "Test message"
+      },
+      "expectedStatus": 500,
+      "expectedBody": {
+        "error": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
