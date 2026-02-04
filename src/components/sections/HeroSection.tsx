@@ -29,7 +29,7 @@ export default function HeroSection({ scrollToSection }: HeroSectionProps) {
             <Button size="default" className="text-base md:text-lg px-6 md:px-8 w-full sm:w-auto" onClick={() => scrollToSection('contacts')}>
               Заказать расчет
             </Button>
-            <Button size="default" variant="outline" className="text-base md:text-lg px-6 md:px-8 bg-white/10 border-white text-white hover:bg-white/20 w-full sm:w-auto" onClick={() => scrollToSection('production')}>
+            <Button size="default" variant="outline" className="text-base md:text-lg px-6 md:px-8 bg-white/10 border-white text-white hover:bg-white/20 w-full sm:w-auto" onClick={() => scrollToSection('projects')}>
               Наши проекты
             </Button>
           </div>
