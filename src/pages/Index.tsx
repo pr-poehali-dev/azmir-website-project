@@ -334,6 +334,13 @@ const Index = () => {
                     <div className="text-sm text-muted-foreground">Алтайский край, Россия</div>
                   </div>
                 </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="Send" className="text-primary mt-1" size={20} />
+                  <div>
+                    <a href="https://t.me/+79619808985" target="_blank" rel="noopener noreferrer" className="font-semibold hover:text-primary transition-colors">Написать в Telegram</a>
+                    <div className="text-sm text-muted-foreground">Быстрая связь в мессенджере</div>
+                  </div>
+                </div>
               </div>
             </div>
             <Card className="animate-slide-in-right" style={{opacity: 0}}>
