@@ -6,6 +6,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
+import { useState } from 'react';
 
 interface Product {
   title: string;
@@ -27,6 +28,12 @@ interface MainSectionsProps {
 }
 
 export default function MainSections({ products, projects, certificates }: MainSectionsProps) {
+  const [consentPrivacy, setConsentPrivacy] = useState(false);
+  const [consentData, setConsentData] = useState(false);
+  const [consentRecommendations, setConsentRecommendations] = useState(false);
+
+  const isFormValid = consentPrivacy && consentData && consentRecommendations;
+
   return (
     <>
       <section id="products" className="py-12 md:py-24 bg-muted/30">
@@ -242,21 +249,36 @@ export default function MainSections({ products, projects, certificates }: MainS
                   
                   <div className="space-y-3">
                     <div className="flex items-start gap-2">
-                      <Checkbox id="consent" className="mt-1" />
+                      <Checkbox 
+                        id="consent" 
+                        className="mt-1" 
+                        checked={consentData}
+                        onCheckedChange={(checked) => setConsentData(checked as boolean)}
+                      />
                       <label htmlFor="consent" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
                         Я согласен на <Link to="/consent" className="text-primary hover:underline">обработку персональных данных</Link>
                       </label>
                     </div>
                     
                     <div className="flex items-start gap-2">
-                      <Checkbox id="privacy" className="mt-1" />
+                      <Checkbox 
+                        id="privacy" 
+                        className="mt-1" 
+                        checked={consentPrivacy}
+                        onCheckedChange={(checked) => setConsentPrivacy(checked as boolean)}
+                      />
                       <label htmlFor="privacy" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
                         Я ознакомлен с <Link to="/privacy" className="text-primary hover:underline">политикой конфиденциальности</Link>
                       </label>
                     </div>
                     
                     <div className="flex items-start gap-2">
-                      <Checkbox id="recommendations" className="mt-1" />
+                      <Checkbox 
+                        id="recommendations" 
+                        className="mt-1" 
+                        checked={consentRecommendations}
+                        onCheckedChange={(checked) => setConsentRecommendations(checked as boolean)}
+                      />
                       <label htmlFor="recommendations" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
                         Я ознакомлен с <Link to="/recommendations" className="text-primary hover:underline">использованием рекомендательных технологий</Link>
                       </label>
@@ -270,7 +292,7 @@ export default function MainSections({ products, projects, certificates }: MainS
                     </div>
                   </div>
                   
-                  <Button className="w-full" size="lg">
+                  <Button className="w-full" size="lg" disabled={!isFormValid}>
                     Отправить заявку
                   </Button>
                 </form>
