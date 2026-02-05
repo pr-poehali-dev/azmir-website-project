@@ -45,7 +45,7 @@ export default function Header({ activeSection, mobileMenuOpen, setMobileMenuOpe
               ))}
             </nav>
             <div className="flex items-center gap-4">
-              <Button className="hidden md:inline-flex">Получить расчет</Button>
+              <Button className="hidden md:inline-flex" onClick={() => scrollToSection('contacts')}>Получить расчет</Button>
               <button 
                 className="md:hidden p-2"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
