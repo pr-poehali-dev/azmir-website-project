@@ -130,7 +130,7 @@ export default function Delivery() {
                 </p>
                 <div className="space-y-2 text-muted-foreground">
                   <p>Телефон: <a href="tel:+79619808985" className="text-primary hover:underline">+7 (961) 980-89-85</a></p>
-                  <p>Email: <a href="mailto:azmir2024@bk.ru" className="text-primary hover:underline">azmir2024@bk.ru</a></p>
+                  <p>Email: <a href="mailto:priority_eng@internet.ru" className="text-primary hover:underline">priority_eng@internet.ru</a></p>
                   <p>Telegram: <a href="https://t.me/+79619808985" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Написать в мессенджере</a></p>
                   <p>Адрес: г. Барнаул, 9-й Заводской 62</p>
                 </div>

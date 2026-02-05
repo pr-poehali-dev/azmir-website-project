@@ -83,7 +83,7 @@ export default function Recommendations() {
                 <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                   <li>Отключение cookies в настройках браузера;</li>
                   <li>Использование режима инкогнито (приватный просмотр);</li>
-                  <li>Направление запроса на отключение на электронную почту: azmir2024@bk.ru;</li>
+                  <li>Направление запроса на отключение на электронную почту: priority_eng@internet.ru;</li>
                   <li>Использование специальных расширений браузера для блокировки трекеров.</li>
                 </ul>
                 <p className="text-muted-foreground leading-relaxed mt-4">
@@ -116,7 +116,7 @@ export default function Recommendations() {
                   <p>ОГРН: 1222200003080</p>
                   <p>Адрес: 656063, Россия, Алтайский край, г. Барнаул, проезд Заводской 9-Й, д.62, оф. 32</p>
                   <p>Телефон: +7 (961) 980-89-85</p>
-                  <p>Email: azmir2024@bk.ru</p>
+                  <p>Email: priority_eng@internet.ru</p>
                 </div>
               </section>
 

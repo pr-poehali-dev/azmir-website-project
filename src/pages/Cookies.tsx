@@ -168,7 +168,7 @@ export default function Cookies() {
                   <p>ОГРН: 1222200003080</p>
                   <p>Адрес: 656063, Россия, Алтайский край, г. Барнаул, проезд Заводской 9-Й, д.62, оф. 32</p>
                   <p>Телефон: +7 (961) 980-89-85</p>
-                  <p>Email: azmir2024@bk.ru</p>
+                  <p>Email: priority_eng@internet.ru</p>
                 </div>
               </section>
 

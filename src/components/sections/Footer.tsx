@@ -43,7 +43,7 @@ export default function Footer() {
               <li><Link to="/requisites" className="text-white/70 hover:text-white transition-colors">Реквизиты компании</Link></li>
               <li><Link to="/delivery" className="text-white/70 hover:text-white transition-colors">Условия доставки</Link></li>
               <li className="text-white/70">Телефон: +7 (961) 980-89-85</li>
-              <li className="text-white/70">Email: azmir2024@bk.ru</li>
+              <li className="text-white/70">Email: priority_eng@internet.ru</li>
             </ul>
           </div>
         </div>

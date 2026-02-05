@@ -82,8 +82,8 @@ export default function Requisites() {
                       <Icon name="Mail" className="text-primary mt-1" size={24} />
                       <div>
                         <p className="text-sm font-medium text-muted-foreground mb-1">Электронная почта</p>
-                        <a href="mailto:azmir2024@bk.ru" className="text-lg font-semibold hover:text-primary transition-colors">
-                          azmir2024@bk.ru
+                        <a href="mailto:priority_eng@internet.ru" className="text-lg font-semibold hover:text-primary transition-colors">
+                          priority_eng@internet.ru
                         </a>
                       </div>
                     </div>
