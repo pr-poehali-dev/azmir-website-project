@@ -259,7 +259,7 @@ export default function MainSections({ products, projects, certificates }: MainS
                 <div className="flex items-start gap-3">
                   <Icon name="Mail" className="text-primary mt-1" size={20} />
                   <div>
-                    <div className="font-semibold">azmir2024@bk.ru</div>
+                    <div className="font-semibold">priority_eng@internet.ru</div>
                     <div className="text-sm text-muted-foreground">Ответим в течение часа</div>
                   </div>
                 </div>
